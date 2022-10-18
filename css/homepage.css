@@ -1,0 +1,47 @@
+.wrapper-in-body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.featured {
+    width: 75%;
+}
+
+.weekly {
+    width: 25%;
+}
+
+.column {
+    float: left;
+    padding: 5px;
+
+    height: 500px;
+}
+
+.float{
+    float: left;
+}
+
+.left {
+    width: 65%;
+}
+
+.right {
+    width: 30%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.featured-article{
+    padding: 3px;
+}
+
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

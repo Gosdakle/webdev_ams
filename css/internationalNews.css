@@ -1,0 +1,14 @@
+.display{
+    float: left;
+  }
+  .usaImage{
+    float: left;
+    width: 200px;
+  }
+.photo{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+  }
+ 

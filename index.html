@@ -12,57 +12,66 @@
 </head>
 
 <body>
-    <div class="wrapper-in-body">
-        <header>
+    <div class="grid-container">
+        <header class="header">
             <nav>
                 <ul class="header_ul">
-                    <li class="header_logo"><div class="logoSvgBase64" a href="index.html"></div> </li>
+                    <li class="header_logo">
+                        <div class="logoSvgBase64" a href="index.html"></div>
+                    </li>
                     <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
                     <li class="header_li"><a href="internationalOros.html">Олон улс</a></li>
-                    <li class="header_li"><a href="economy.html" >Эдийн засаг</a></li>
+                    <li class="header_li"><a href="economy.html">Эдийн засаг</a></li>
                     <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
-                    <li> <div class="searchIcon"></div></li>
+                    <li>
+                        <div class="searchIcon"></div>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <section>
-            <div class="row">
-                <div class="column left">
-                    <article class="featured">
-                        <img src="images/news_image1.jpeg" alt="" style="width:100%; height:300px; object-fit:cover;">
-                    </article>
-                </div>
-                <div class="column right">
-                    <article class="weekly">
-                        <h2>Энэ 7 хоногт</h2>
-                        <div class="flex-container">
-                            <article class="featured-article">
-                                <i class="material-icons float">schedule</i>
-                                <p class="float">шинэ</p>
-                            </article>
-                            <article class="featured-article">
-                                <i class="material-icons float">schedule</i>
-                                <p class="float">их уншсан</p>
-                            </article>
-                            <article class="featured-article">
-                                <i class="material-icons float">schedule</i>
-                                <p class="float">эрэлттэй</p>
-                            </article>
-                        </div>
-                    </article>
-                </div>
+        <article class="featured">
+            <img src="images/news_image1.jpeg" alt="" class="featured-image">
+            <h3>Европын холбооны бизнес эрхлэгчдийг Монголд хөрөнгө оруулахыг уриалан ажиллана</h3>
+            <p>Засгийн газрын Хэрэг эрхлэх газрын дарга Д.Амарбаясгалан Европын Холбооноос Монгол Улсад суугаа Элчин
+                сайд хатагтай Аксель Никейзийг хүлээн авч уулзлаа.</p>
+        </article>
+        <article class="weekly">
+            <div class="flex-container">
+                <h2>Энэ 7 хоногт</h2>
             </div>
-        </section>
+            <div class="flex-container-category">
+                <article class="weekly-selected">
+                    <i class="material-icons">schedule</i>
+                    <p class="weekly-header-2">шинэ</p>
+                </article>
+                <article>
+                    <i class="material-icons">schedule</i>
+                    <p class="weekly-header-2">их уншсан</p>
+                </article>
+                <article>
+                    <i class="material-icons">schedule</i>
+                    <p class="weekly-header-2">эрэлттэй</p>
+                </article>
+            </div>
+            <div class="flex-container-weekly weekly-content">
+                <article>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний групп ерөнхий төлөв танилцуулж байна</article>
+                <article>Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний групп ерөнхий төлөв танилцуулж байна</article>
+                <article>Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний групп ерөнхий төлөв танилцуулж байна</article>
+            </div>
+        </article>
 
-        <h1>Заавал унших нийтлэл</h1>
-        <section class="flex-container">
+        <div class="grid-full-row section-header">
+            <h2>Заавал унших нийтлэл</h2>
+        </div>
+
+        <section class="grid-full-row flex-container-must-read">
             <article>
-                <img src="images/rect_img1.png" alt="" >
+                <img src="images/rect_img1.png" alt="">
                 <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
             </article>
             <article>
                 <img src="images/rect_img2.png" alt="">
-                <h4>""Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
+                <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
             </article>
             <article>
                 <img src="images/rect_img3.png" alt="">
@@ -74,20 +83,25 @@
             </article>
         </section>
 
-        <section class="flex-container">
-            <img src="images/logo1.png" alt="">
-            <div class="email">
-                <p>Имэйл хаягаа бичээд шинээр орж буй нийтлэлийг цаг алдалгүй имэйлээр аваарай</p>
-                <input type="text">
-                <p style="text-align: right;">Бид тань руу ямар нэг сурталчилгаа явуулахгүй</p>
+        <div class="grid-full-row full-width">
+            <section class="email">
+                <img src="images/logo1.png" alt="">
+                <div>
+                    <p>Имэйл хаягаа бичээд шинээр орж буй нийтлэлийг <b>цаг алдалгүй имэйлээр аваарай</b></p>
+                    <input type="text">
+                    <p>Бид тань руу ямар нэг сурталчилгаа явуулахгүй</p>
+                </div>
+                <button>Бүртгүүлэх</button>
+            </section>
+        </div>
+
+        <section class="grid-full-row">
+            <div class="section-header">
+                <h2> Олон улсын мэдээ</h2>
             </div>
-            <button>Бүртгүүлэх</button>
+            <img src="images/worldmap.png" alt="" class="map">
         </section>
 
-        <section>
-            <h1>Олон улсын мэдээ</h1>
-            <img src="images/worldmap.png" alt="" class="center-image">
-        </section>
 
         <footer>
 

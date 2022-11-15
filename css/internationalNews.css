@@ -4,11 +4,64 @@
   .usaImage{
     float: left;
     width: 200px;
+    margin-right: 10px;
   }
 .photo{
    display: block;
    margin-left: auto;
    margin-right: auto;
    width: 50%;
+   
   }
- 
+
+
+.olonUls{
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #0187F4;
+  
+}
+.ANU{
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #0187F4;
+}
+.author-name-3 {
+  border-left: 4px solid #1757EE;
+  padding-left: 10px;
+  font-weight: 500;
+  font-family: 'Fira Sans Condensed',sans-serif;
+  
+}
+.meta-stat {
+  font-family: "Fira Sans",sans-serif;
+}
+
+.article-meta, .meta-time {
+  font-size: 11px;
+  color: #9B9B9B;
+  line-height: 16px;
+  text-transform: uppercase;
+  
+}
+.uk-float-left {
+  float: left;
+}
+div {
+  display: block;
+  
+}
+
+.bi{
+  color: #0187F4;
+  margin-top: 5px;
+  
+}
+.bbr-pagination>li.uk-active>a {
+  font-weight: 700;
+}
+hr {
+  border-top: 1px solid #0187F4;
+}

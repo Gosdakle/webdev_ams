@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: rgba(1, 135, 244, 1)
 }
 
@@ -8,7 +8,7 @@
     max-width: 75%;
     margin: 0 auto;
     grid-gap: 1em;
-    grid-template-columns:2.8fr 1fr;
+    grid-template-columns: 2.6fr 1fr;
 }
 
 .flex-container {
@@ -63,7 +63,7 @@
     flex-direction: column;
 }
 
-.weekly-selected{
+.weekly-selected {
     color: var(--primary-color);
     border-bottom: solid 0.2em var(--primary-color);
 }
@@ -73,7 +73,7 @@
     vertical-align: super;
 }
 
-.flex-container-weekly article{
+.flex-container-weekly article {
     padding-left: 0.5em;
     border-left: solid black;
 }
@@ -82,12 +82,12 @@
     grid-column: 1/3;
 }
 
-.section-header{
+.section-header {
     display: flex;
     justify-content: flex-start;
 }
 
-.section-header h2{
+.section-header h2 {
     border-bottom: solid 0.2em var(--primary-color);
 }
 
@@ -97,7 +97,7 @@
     justify-content: center;
 }
 
-.flex-container-must-read > article {
+.flex-container-must-read>article {
     display: flex;
     flex-flow: column;
     gap: 1em;
@@ -105,7 +105,7 @@
     border: solid thin lightgray;
 }
 
-.flex-container-must-read > article > img {
+.flex-container-must-read>article>img {
     max-width: 15em;
     max-height: 15em;
     margin: 0 auto;
@@ -120,20 +120,20 @@
     margin-bottom: 3em;
 }
 
-.email > img{
+.email>img {
     height: 70%;
 }
 
-.email > div {
+.email>div {
     display: flex;
     flex-flow: column;
 }
 
-.email > div > input{
+.email>div>input {
     height: 2em;
 }
 
-.email > button{
+.email>button {
     height: 3em;
     width: 10em;
 }
@@ -141,3 +141,4 @@
 .map {
     width: 100%;
 }
+

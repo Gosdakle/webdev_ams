@@ -31,7 +31,7 @@
 .searchIcon{
     float: right;
     margin-top: 60px; 
-}
+} 
 .header_li a{
     display: block;
     text-align: center;
@@ -209,4 +209,7 @@ footer .bottom-details .bottom_text{
   footer .content .link-boxes .input-box{
     width: 100%;
   }
+}
+.footer_logo{
+  float: left;
 }

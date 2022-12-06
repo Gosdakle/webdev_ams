@@ -14,19 +14,30 @@
    
   }
 
+.usa {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .olonUls{
   text-decoration: underline;
   text-underline-offset: 12px;
   text-decoration-thickness: 4px;
   text-decoration-color: #0187F4;
-  
+  text-align: left;
 }
 .ANU{
   text-decoration: underline;
   text-underline-offset: 12px;
   text-decoration-thickness: 4px;
   text-decoration-color: #0187F4;
+  text-align: center;
 }
 .author-name-3 {
   border-left: 4px solid #1757EE;
@@ -64,4 +75,26 @@ div {
 }
 hr {
   border-top: 1px solid #0187F4;
+}
+.grid-container {
+  display: grid;
+  width: 75%;
+  max-width: 75%;
+  margin: 0 auto;
+  grid-gap: 1em;
+  grid-template-columns: 2.6fr 1fr;
+}
+.grid-full-row {
+  grid-column: 1/3;
+}
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+}
+.map {
+  width: 100%;
+}
+.flex-container-weekly article {
+  padding-left: 0.5em;
+  border-left: solid black;
 }

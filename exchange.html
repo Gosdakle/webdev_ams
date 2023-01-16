@@ -9,65 +9,242 @@
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/newsDetials.css">
-    
+
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        #wrapper {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #title {
+            width: 800px;
+            height: 100px;
+            background-color: #F0F0F0;
+            display: grid;
+            place-content: center;
+        }
+
+        #currencyConverter {
+            width: 800px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 300px;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .box h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box .input {
+            width: 100%;
+            height: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .box select {
+            width: 100%;
+            height: 25px;
+            font-size: 18px;
+            line-height: 1.25;
+        }
+
+        .box input[type="submit"] {
+            width: 100%;
+            height: 30px;
+            background-color: #006699;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: bold;
+            border: 0;
+            line-height: 1.25;
+        }
+
+        .box ul {
+            margin-top: 10px;
+        }
+
+        .box ul li {
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box ul li span {
+            font-weight: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .currency-tbl {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+        }
+
+        .currency-tbl thead tr th {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #777;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            font-weight: normal;
+        }
+
+        .currency-tbl tbody tr td {
+            padding: 10px 0;
+            font-size: 16px;
+            color: #777;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .currency-tbl tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .currency-tbl tbody tr:nth-child(2n) {
+            background: #fafafa;
+        }
+
+        .currency-tbl tbody tr td:nth-child(2) {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .currency-tbl tbody tr td:nth-child(3) {
+            color: #00a8ff;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="wrapper-in-body">
-        <header>
-            <nav>
-                <ul class="header_ul">
-                    <li class="header_logo"> <a  href=" index.html "> <div class="logoSvgBase64" >  </div> </a> </li>
-                    <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
-                    <li class="header_li"><a href="internationalOros.html">Олон улс</a></li>
-                    <li class="header_li"><a href="economy.html" >Эдийн засаг</a></li>
-                    <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
-                    <li> <div class="searchIcon"></div></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section>
-            <p>Endees</p>
-            <input type="text">
-            <div> <button style="height: 30px; width:30px; margin: 5px"><i class="material-icons">sync_alt</i></button>
+    <div id="wrapper">
+        <div id="title">
+            <h1>Валютын ханш</h1>
+        </div>
+        <div id="currencyConverter">
+            <div class="box">
+                <h2>Convert from</h2>
+                <select name="from_currency">
+                    <option value="USD">US Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">British Pound</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="AUD">Australian Dollar</option>
+                </select>
+                <input type="text" name="amount" class="input" />
             </div>
-            <p>Enend</p>
-            <input type="text">
-        </section>
+            <i class="material-icons">sync_alt</i>
+            <div class="box">
+                <h2>To</h2>
+                <select name="to_currency">
+                    <option value="USD">US Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">British Pound</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="AUD">Australian Dollar</option>
+                </select>
+                <input type="text" name="amount" class="input" />
+            </div>
+        </div>
 
-        <section>
-            <h2>Valutiin hansh</h2>
-            <article>
-                <h3>АНУ-ын доллар</h3>
-                <picture>USD</p>
-                <p>3,378.10</p>
-            </article>
-            <article>
-                <h3>Евро</h3>
-                <p>EUR</p>
-                <p>3,322.36</p>
-            </article>
-            <article>
-                <h3>БНХАУ-ын юань</h3>
-                <p>CNY</p>
-                <p>465.40</p>
-            </article>
-            <article>
-                <h3>ОХУ-ын рубль</h3>
-                <p>RUB</p>
-                <p>54.92</p>
-            </article>
-            <article>
-                <h3>Японы иен</h3>
-                <p>JPY</p>
-                <p>22.63</p>
-            </article>
-        </section>
-
-        <footer>
-
-        </footer>
+    </div>
+    <div class="container">
+        <table class="currency-tbl">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Rate</th>
+                    <th>Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>US Dollar</td>
+                    <td>1.13</td>
+                    <td>+0.01</td>
+                </tr>
+                <tr>
+                    <td>Euro</td>
+                    <td>1.25</td>
+                    <td>+0.02</td>
+                </tr>
+                <tr>
+                    <td>British Pound</td>
+                    <td>1.39</td>
+                    <td>+0.03</td>
+                </tr>
+                <tr>
+                    <td>Japanese Yen</td>
+                    <td>123.45</td>
+                    <td>-0.01</td>
+                </tr>
+                <tr>
+                    <td>Swiss Franc</td>
+                    <td>1.09</td>
+                    <td>+0.02</td>
+                </tr>
+                <tr>
+                    <td>Canadian Dollar</td>
+                    <td>1.35</td>
+                    <td>+0.04</td>
+                </tr>
+                <tr>
+                    <td>Australian Dollar</td>
+                    <td>1.45</td>
+                    <td>+0.05</td>
+                </tr>
+                <tr>
+                    <td>Chinese Yuan</td>
+                    <td>7.75</td>
+                    <td>-0.02</td>
+                </tr>
+                <tr>
+                    <td>Hong Kong Dollar</td>
+                    <td>8.85</td>
+                    <td>+0.01</td>
+                </tr>
+                <tr>
+                    <td>Singapore Dollar</td>
+                    <td>1.51</td>
+                    <td>+0.03</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 

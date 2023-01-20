@@ -2,143 +2,164 @@
     --primary-color: rgba(1, 135, 244, 1)
 }
 
-.grid-container {
-    display: grid;
+.homepage-container {
     width: 75%;
-    max-width: 75%;
     margin: 0 auto;
-    grid-gap: 1em;
-    grid-template-columns: 2.6fr 1fr;
-}
-
-.flex-container {
     display: flex;
-    gap: 1em;
+    flex-direction: column;
+    gap: 3rem;
     justify-content: center;
+    align-items: center;
 }
 
-.flex-container-category {
+.featured-section {
     display: flex;
-    gap: 1em;
-    justify-content: center;
-    border-bottom: thin solid lightslategrey;
-}
-
-.header {
-    grid-column: 1/3;
-    height: auto;
+    align-items: flex-start;
+    gap: 3rem;
+    max-height: 30rem;
 }
 
 .featured {
-    height: min-content;
-    flex-grow: 3;
-    flex-basis: 0;
-    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 70%;
 }
 
 .featured-image {
     width: 100%;
-    height: 300px;
+    max-height: 20rem;
     object-fit: cover;
 }
 
-.flex-container-weekly {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    gap: 1em;
-    padding-top: 1em;
-}
-
-.weekly {
-    flex-grow: 1;
-    flex-basis: 0;
-    height: 100%;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    overflow: hidden;
-    border: dotted lightslategrey;
+.featured-weekly {
     display: flex;
     flex-direction: column;
+    flex: 0 1 25%;
+    align-self: stretch;
+    border: dotted lightslategrey;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.featured-weekly h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.featured-weekly-category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+    overflow-wrap: break-word;
+    border-bottom: thin solid var(--primary-color);
+}
+
+.featured-weekly-category-container p {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.featured-weekly-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    white-space: nowrap;
 }
 
 .weekly-selected {
     color: var(--primary-color);
-    border-bottom: solid 0.2em var(--primary-color);
 }
 
-.weekly-header-2 {
-    display: inline;
-    vertical-align: super;
-}
-
-.flex-container-weekly article {
-    padding-left: 0.5em;
+.featured-category-content p{
+    padding-left: 0.5rem;
     border-left: solid black;
 }
 
-.grid-full-row {
-    grid-column: 1/3;
-}
-
-.section-header {
+.must-read {
     display: flex;
-    justify-content: flex-start;
+    gap: 1rem;
+    flex-direction: column;
 }
 
-.section-header h2 {
+.must-read h2 {
+    width: fit-content;
     border-bottom: solid 0.2em var(--primary-color);
 }
 
-.flex-container-must-read {
+.must-read-articles {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
     justify-content: center;
+    align-items: flex-start;
 }
 
-.flex-container-must-read>article {
+.must-read-articles article img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.email-subscription-wrapper {
+    width: 100vw;
+    padding: 2rem 0 2rem 0;
+    background: var(--primary-color);
     display: flex;
-    flex-flow: column;
-    gap: 1em;
-    align-content: center;
-    border: solid thin lightgray;
-}
-
-.flex-container-must-read>article>img {
-    max-width: 15em;
-    max-height: 15em;
-    margin: 0 auto;
-}
-
-.email {
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
 }
 
-.email>img {
-    height: 70%;
-}
-
-.email>div {
+.email-subscription {
+    width: 75%;
     display: flex;
-    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    color: white;
 }
 
-.email>div>input {
-    height: 2em;
-}
-
-.email>button {
-    height: 3em;
+.email-subscription button {
+    height: 3rem;
     width: 10em;
 }
 
-.map {
-    width: 100%;
+.email-subscription-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
+.email-subscription-text p {
+    margin: 0;
+    padding: 0;
+}
+
+.email-subscription-text input {
+    width: 100%;
+    line-height: 1.75;
+}
+
+.world-map {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.world-map h2 {
+    width: fit-content;
+    border-bottom: solid 0.2em var(--primary-color);
+}
+
+.world-map img {
+    width: 100%;
+}

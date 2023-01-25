@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/headerFooter.css">
     <link rel="stylesheet" href="css/newsdetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/homepage.css">
   
 
     <title>Мэдээний дэлгэрэнгүй</title>
@@ -14,34 +15,81 @@
 <body class="wrapper-in-body">
     
     <header>
-        <nav>
+        <nav class="header-menu">
             <ul class="header_ul">
                 <li class="header_logo"> <a  href=" index.html "> <div class="logoSvgBase64" >  </div> </a> </li>
+                
+                
                 <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
                 <li class="header_li"><a href="internationalOros.html">Олон улс</a></li>
                 <li class="header_li"><a href="economy.html" >Эдийн засаг</a></li>
                 <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
                 <li> <div class="searchIcon"></div></li>
+                <li class="hamburger-menu" onclick="changeMenu()"> <a><img style="width: 23px;" src="images/hamburger_menu.png" alt="menu_icon"></a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="floating-menu" id="floating-menu" onclick="changeMenu()">
+      <ul class="floating-menu-list">
+        <li><a href="society.html"> Нийгэм,Улс төр </a></li>
+        <li><a href="internationalOros.html">Олон улс</a></li>
+        <li><a href="economy.html" >Эдийн засаг</a></li>
+        <li><a href="exchange.html">Валютын ханш</a></li>
+      </ul>
+    </div>
 
 
     <figure>
         <article class="newsDArticle" >
             Европын холбооны бизнес эрхлэгчдийг Монголд хөрөнгө оруулах уриалан ажиллана
         </article>
-        
-        <img src="images/boxMedDel.png" alt="medeenii delgerengui zurag">
-        <p>
-            “Баялгийн эзэд”-ээс баялаг бүтээгчдээ харамлах, өмөөрөх цаг ирлээ. 
-            Энэ юу гэсэн үг вэ? АМНАТ гэгч айхавтар татвар байн байн зүсээ хувиргаж ААН-үүдийг дарамтлах нь хэрээс хэтрээд дуугарахаас аргагүйд хүргэв. 
-            Нэг жишээ дурьдъя. Эрчим хүчнийбуюу исэлдсэн нүүрс гэж бий. Манай Багануур, Налайх, Шивээ-Овоо зэрэг уурхайнуудаас олборлодог нүүрс л дээ. 
-            Дээрх уурхайнууд дотооддоо борлуулдаг бөгөөд нэг тонн нь 29 орчим мянган төгрөг орчим байдаг. 
-            Борлуулсан нүүрснийхээ тонн тутамд тэд 2.5 хувийг АМНАТ буюу ашигт малтмалын нөөц ашигласны татварт төлнө. 
-            Харин экспортолвол 10 хувийн АМНАТ төлдөг. Гэхдээ эрчим хүчний нүүрс экспортолдог ганцхан газар байгаа нь “Эрдэнэс Тавантолгой” ХК. 
+        <img style="width:40em; height:23em;" src="images/news_image1.jpeg" alt="medeenii delgerengui zurag">
+        <p class="newsDetail">
+          “Баялгийн эзэд”-ээс баялаг бүтээгчдээ харамлах, өмөөрөх цаг ирлээ. 
+          Энэ юу гэсэн үг вэ? АМНАТ гэгч айхавтар татвар байн байн зүсээ хувиргаж ААН-үүдийг дарамтлах нь хэрээс хэтрээд дуугарахаас аргагүйд хүргэв. 
+          Нэг жишээ дурьдъя. Эрчим хүчнийбуюу исэлдсэн нүүрс гэж бий. Манай Багануур, Налайх, Шивээ-Овоо зэрэг уурхайнуудаас олборлодог нүүрс л дээ. 
+          Дээрх уурхайнууд дотооддоо борлуулдаг бөгөөд нэг тонн нь 29 орчим мянган төгрөг орчим байдаг. 
+          Борлуулсан нүүрснийхээ тонн тутамд тэд 2.5 хувийг АМНАТ буюу ашигт малтмалын нөөц ашигласны татварт төлнө. 
+          Харин экспортолвол 10 хувийн АМНАТ төлдөг. Гэхдээ эрчим хүчний нүүрс экспортолдог ганцхан газар байгаа нь “Эрдэнэс Тавантолгой” ХК. 
         </p>
     </figure>
+    
+
+    <div class="grid-full-row section-header">
+      <h2>Заавал унших нийтлэл</h2>
+  </div>
+
+  <section class="grid-full-row flex-container-must-read">
+      <article>
+          <img src="images/rect_img1.png" alt="">
+          <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
+      </article>
+      <article>
+          <img src="images/rect_img2.png" alt="">
+          <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
+      </article>
+      <article>
+          <img src="images/rect_img3.png" alt="">
+          <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
+      </article>
+      <article>
+          <img src="images/rect_img4.png" alt="">
+          <h4>"Эрдэнэс Монгол"-ын Нүүрс, эрчим хүчний группийн ерөнхий төлөвлөгөө</h3>
+      </article>
+  </section>
+
+  <div class="grid-full-row full-width">
+      <section class="email">
+          <img src="images/logo1.png" alt="">
+          <div>
+              <p>Имэйл хаягаа бичээд шинээр орж буй нийтлэлийг <b>цаг алдалгүй имэйлээр аваарай</b></p>
+              <input type="text">
+              <p>Бид тань руу ямар нэг сурталчилгаа явуулахгүй</p>
+          </div>
+          <button>Бүртгүүлэх</button>
+      </section>
+  </div>
     
     <!-- <footer>
         <a  href=" index.html " class="header_logo"> <div class="logoSvgBase64" >  </div> </a>
@@ -85,4 +133,16 @@
 
 
 </body>
+
+<script>
+
+  function changeMenu(){
+    if(document.getElementById("floating-menu").style.display=="" || document.getElementById("floating-menu").style.display=="none"){
+      document.getElementById("floating-menu").style.display = "block";
+    }
+    else{
+      document.getElementById("floating-menu").style.display = "none";
+    }
+  }
+</script>
 </html>

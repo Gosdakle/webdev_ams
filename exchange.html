@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Валютын ханш</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/exchange.css">
-    <link rel="stylesheet" href="css/headerFooter.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/exchange.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav>
-            <ul class="header_ul">
-                <li class="header_logo">
-                    <div class="logoSvgBase64" a href="index.html"></div>
-                </li>
-                <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
-                <li class="header_li"><a href="internationalOros.html">Олон улс</a></li>
-                <li class="header_li"><a href="economy.html">Эдийн засаг</a></li>
-                <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
-                <li>
-                    <div class="searchIcon"><i></i></div>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="header_ul">
+          <li class="header_logo">
+            <div class="logoSvgBase64" a href="index.html"></div>
+          </li>
+          <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
+          <li class="header_li"><a href="/olonuls.html">Олон улс</a></li>
+          <li class="header_li"><a href="economy.html">Эдийн засаг</a></li>
+          <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
+          <li>
+            <div class="searchIcon"><i></i></div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div id="wrapper">
-        <div id="title">
-            <h1>Валютын ханш</h1>
+      <div id="title">
+        <h1>Валютын ханш</h1>
+      </div>
+      <div id="currencyConverter">
+        <div class="box">
+          <h2>Convert from</h2>
+          <select name="from_currency">
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">British Pound</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="AUD">Australian Dollar</option>
+          </select>
+          <input type="text" name="amount" class="input" />
         </div>
-        <div id="currencyConverter">
-            <div class="box">
-                <h2>Convert from</h2>
-                <select name="from_currency">
-                    <option value="USD">US Dollar</option>
-                    <option value="EUR">Euro</option>
-                    <option value="GBP">British Pound</option>
-                    <option value="CAD">Canadian Dollar</option>
-                    <option value="AUD">Australian Dollar</option>
-                </select>
-                <input type="text" name="amount" class="input" />
-            </div>
-            <i class="material-icons">sync_alt</i>
-            <div class="box">
-                <h2>To</h2>
-                <select name="to_currency">
-                    <option value="USD">US Dollar</option>
-                    <option value="EUR">Euro</option>
-                    <option value="GBP">British Pound</option>
-                    <option value="CAD">Canadian Dollar</option>
-                    <option value="AUD">Australian Dollar</option>
-                </select>
-                <input type="text" name="amount" class="input" />
-            </div>
+        <i class="material-icons">sync_alt</i>
+        <div class="box">
+          <h2>To</h2>
+          <select name="to_currency">
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">British Pound</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="AUD">Australian Dollar</option>
+          </select>
+          <input type="text" name="amount" class="input" />
         </div>
-
+      </div>
     </div>
     <div class="container">
-        <table class="currency-tbl">
-            <thead>
-                <tr>
-                    <th>Currency</th>
-                    <th>Rate</th>
-                    <th>Change</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>US Dollar</td>
-                    <td>1.13</td>
-                    <td>+0.01</td>
-                </tr>
-                <tr>
-                    <td>Euro</td>
-                    <td>1.25</td>
-                    <td>+0.02</td>
-                </tr>
-                <tr>
-                    <td>British Pound</td>
-                    <td>1.39</td>
-                    <td>+0.03</td>
-                </tr>
-                <tr>
-                    <td>Japanese Yen</td>
-                    <td>123.45</td>
-                    <td>-0.01</td>
-                </tr>
-                <tr>
-                    <td>Swiss Franc</td>
-                    <td>1.09</td>
-                    <td>+0.02</td>
-                </tr>
-                <tr>
-                    <td>Canadian Dollar</td>
-                    <td>1.35</td>
-                    <td>+0.04</td>
-                </tr>
-                <tr>
-                    <td>Australian Dollar</td>
-                    <td>1.45</td>
-                    <td>+0.05</td>
-                </tr>
-                <tr>
-                    <td>Chinese Yuan</td>
-                    <td>7.75</td>
-                    <td>-0.02</td>
-                </tr>
-                <tr>
-                    <td>Hong Kong Dollar</td>
-                    <td>8.85</td>
-                    <td>+0.01</td>
-                </tr>
-                <tr>
-                    <td>Singapore Dollar</td>
-                    <td>1.51</td>
-                    <td>+0.03</td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="currency-tbl">
+        <thead>
+          <tr>
+            <th>Currency</th>
+            <th>Rate</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>US Dollar</td>
+            <td>1.13</td>
+            <td>+0.01</td>
+          </tr>
+          <tr>
+            <td>Euro</td>
+            <td>1.25</td>
+            <td>+0.02</td>
+          </tr>
+          <tr>
+            <td>British Pound</td>
+            <td>1.39</td>
+            <td>+0.03</td>
+          </tr>
+          <tr>
+            <td>Japanese Yen</td>
+            <td>123.45</td>
+            <td>-0.01</td>
+          </tr>
+          <tr>
+            <td>Swiss Franc</td>
+            <td>1.09</td>
+            <td>+0.02</td>
+          </tr>
+          <tr>
+            <td>Canadian Dollar</td>
+            <td>1.35</td>
+            <td>+0.04</td>
+          </tr>
+          <tr>
+            <td>Australian Dollar</td>
+            <td>1.45</td>
+            <td>+0.05</td>
+          </tr>
+          <tr>
+            <td>Chinese Yuan</td>
+            <td>7.75</td>
+            <td>-0.02</td>
+          </tr>
+          <tr>
+            <td>Hong Kong Dollar</td>
+            <td>8.85</td>
+            <td>+0.01</td>
+          </tr>
+          <tr>
+            <td>Singapore Dollar</td>
+            <td>1.51</td>
+            <td>+0.03</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
-
+  </body>
 </html>

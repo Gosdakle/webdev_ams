@@ -9,32 +9,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="css/exchange.css" />
-    <link rel="stylesheet" href="css/headerFooter.css" />
+    <link rel="stylesheet" href="/css/exchange.css" />
+    <link rel="stylesheet" href="css/header.css" />
   </head>
 
   <body>
     <header class="header">
-      <nav>
-        <ul class="header_ul">
-          <li class="header_logo">
-            <div class="logoSvgBase64" a href="index.html"></div>
-          </li>
-          <li class="header_li"><a href="society.html"> Нийгэм,Улс төр </a></li>
-          <li class="header_li"><a href="/olonuls.html">Олон улс</a></li>
-          <li class="header_li"><a href="economy.html">Эдийн засаг</a></li>
-          <li class="header_li"><a href="exchange.html">Валютын ханш</a></li>
-          <li>
-            <div class="searchIcon"><i></i></div>
-          </li>
-        </ul>
-      </nav>
+      <ul class="header-ul">
+        <a href="/index.html" class="header-logo"></a>
+        <li><a href="/society.html"> Нийгэм, улс төр </a></li>
+        <li><a href="/olonuls.html">Олон улс</a></li>
+        <li><a href="/economy.html">Эдийн засаг</a></li>
+        <li><a href="/exchange.html">Валютын ханш</a></li>
+      </ul>
+      <i class="material-icons">search</i>
     </header>
-    <div id="wrapper">
-      <div id="title">
+
+    <div class="wrapper">
+      <div class="title">
         <h1>Валютын ханш</h1>
       </div>
-      <div id="currencyConverter">
+      <div class="currencyConverter">
         <div class="box">
           <h2>Convert from</h2>
           <select name="from_currency">

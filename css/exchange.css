@@ -1,17 +1,22 @@
-#wrapper {
-    width: 800px;
-    margin: 0 auto;
+:root {
+    --primary-color: rgba(1, 135, 244, 1)
 }
 
-#title {
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.title {
     width: 800px;
     height: 100px;
-    background-color: #F0F0F0;
+    background-color: var(--primary-color);;
     display: grid;
     place-content: center;
 }
 
-#currencyConverter {
+.currencyConverter {
     width: 800px;
     padding: 20px;
     display: flex;
@@ -76,12 +81,6 @@
 
 .box ul li span {
     font-weight: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .container {

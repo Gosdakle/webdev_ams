@@ -1,3 +1,4 @@
+// Hamgiin ih hun uzsen medeenii class
 class MostViewedArticle {
     constructor(image, title, admin, time, views, comments, desc) {
         this.image = image;
@@ -48,37 +49,48 @@ class MostViewedArticle {
     }
 }
 
+//Hamgiin ihiig oloh class
 class MostViewed {
+
+    //Baiguulagch deer json-ii URlaa avj uusgene
     constructor(jsonURL) {
         this.jsonURL = jsonURL;
-        this.mostViewedList = [];
     }
 
+    //jsonoo url-ees avan bolovsruulan renderleh 
     GetJSON(element) {
+        //ugugdluu url-s avah
         fetch(this.jsonURL)
             .then(res => {
+                //butsaasan hariug json helbert oruulah
                 res.json()
                     .then(values => {
                         console.log("values", values.record.articles);
                         const unfilteredArray = values.record.articles;
+
+                        //json utguudaa filterByView() funkts ashiglan filterleh 
                         const filterArray = unfilteredArray.filter(this.filterByView);
 
+                        //filtert medee baihiig shalgah nuhtsul
                         if (filterArray.length > 0) {
+                            //html uusgeh utgaa uusgene
                             let value = "";
 
+                            //json-ii utgaa maplan, html code bolgoh
                             const finalArray = filterArray.map(newArticleClass => {
                                 console.log("newArticleClass", newArticleClass);
                                 const newArticle = new MostViewedArticle(newArticleClass.image, newArticleClass.title, newArticleClass.admin, newArticleClass.time, newArticleClass.views, newArticleClass.comments, newArticleClass.desc);
                                 return newArticle.render();
-                            })
+                            })  //array-gaa reduce ashiglaj ihiig n olno
                                 .reduce(function (prev, cur) {
-                                    return prev < cur ? prev : cur;
+                                    return prev < cur ? cur : cur;
                                 }, -Infinity);
 
+                            //finalArray-g value-daa ugnu
                             value += finalArray;
                             console.log("value", value);
 
-
+                            //finalArray-gaa htmldee oruulah
                             document.getElementById(element).insertAdjacentHTML("afterend", value);
                         }
                     }

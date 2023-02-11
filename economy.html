@@ -16,7 +16,10 @@
 </head>
 
 <script>
+  // Ediin zasgiin medeenii class uusgesen
   class Article {
+
+    //Classiin ugugdliig baiguulagch function ashiglaj onooson
     constructor(image, title, admin, time, views, comments, desc) {
       this.image = image;
       this.title = title;
@@ -27,6 +30,7 @@
       this.desc = desc;
     }
 
+    // Classiin ugugdliig ashiglan html code bolgon huvirgaj renderlesen
     render() {
       return `<article class="news-con">
                 <section class="news-container">
@@ -66,6 +70,7 @@
     }
   }
 
+  // json ugugdliig uusgen hadgalsan
   const newsData = {
     articles: [
       {
@@ -134,6 +139,7 @@
     ]
   }
 
+  //json ugugdliig bugdiig ni loop hiin Article classiin object bolgood html code bolgoson
   function renderArticles(articles, element) {
     let value = "";
 
@@ -146,6 +152,7 @@
     document.getElementById(element).insertAdjacentHTML("afterend", value);
   }
 
+  //Huudsiig uusgehed huudasnii medeeg renderleh
   window.onload = () => renderArticles(newsData.articles, "ediinzasag");
 </script>
 

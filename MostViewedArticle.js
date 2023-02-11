@@ -83,7 +83,7 @@ class MostViewed {
                                 return newArticle.render();
                             })  //array-gaa reduce ashiglaj ihiig n olno
                                 .reduce(function (prev, cur) {
-                                    return prev < cur ? cur : cur;
+                                    return prev < cur ? prev : cur;
                                 }, -Infinity);
 
                             //finalArray-g value-daa ugnu

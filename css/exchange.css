@@ -14,6 +14,7 @@
     background-color: var(--primary-color);;
     display: grid;
     place-content: center;
+    color: white;
 }
 
 .currencyConverter {

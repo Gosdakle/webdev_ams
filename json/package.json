@@ -1,0 +1,28 @@
+{
+  "name": "webdev_ams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gosdakle/webdev_ams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gosdakle/webdev_ams/issues"
+  },
+  "homepage": "https://github.com/Gosdakle/webdev_ams#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
+  }
+}

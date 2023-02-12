@@ -11,8 +11,20 @@
 .wrapper-in-body {
     width: 75%;
     margin: 0 auto;
+    font-family: 'Fira Sans', sans-serif;
 }
-.header_ul{
+.figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.figure-image{
+    width: 70%;
+}
+
+
+/* .header_ul{
     list-style-type: none;
     margin-bottom: 40px;
     overflow: hidden;
@@ -42,20 +54,21 @@
 .header_li a:hover{
     background-color: rgba(1, 135, 244, 1);
     color: white;
-  }
+  } */
   .newsDArticle {
     font-weight: bold;
     font-size: 1.17em;
-    width: 30em;
-    text-align: justify;
+    width: 100%;
+    text-align: center;
     text-justify: inter-word;
     padding-bottom: 2em;
 }
 .newsDetail{
-    width: 40em;
+    width: 75%;
+    word-wrap: break-word;
     text-align: justify;
-    text-justify: inter-word;
-
+    margin-bottom: 5rem;
+    margin-top: 3rem;
 }
 
 .hamburger-menu{

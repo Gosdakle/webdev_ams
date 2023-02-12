@@ -1,0 +1,129 @@
+@charset "UTF-8";
+:root {
+    --primary-color: rgba(1, 135, 244, 1)
+}
+.currency-converter {
+  font-family: helvetica;
+  background: #efefef;
+  color: #333;
+}
+.currency-converter h3 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+}
+.currency-converter p {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.currency-converter__block {
+  width: 19%;
+  display: inline-block;
+  padding: 1em;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.currency-converter__block input {
+  width: 100%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 5px solid var(--primary-color);
+}
+.currency-converter__block label {
+  width: 100%;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  color: #656565;
+}
+
+.currency-converter__block--pound {
+  width: 100%;
+  max-width: 30em;
+  display: block;
+  padding: 1em;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin: 0 auto;
+}
+.currency-converter__block--pound input {
+  width: 89%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 5px solid var(--primary-color);
+}
+.currency-converter__block--pound label {
+  width: 100%;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  color: #656565;
+}
+
+.pound:before {
+  content: "₮";
+  display: block;
+  position: absolute;
+  background: var(--primary-color);
+  padding: 1em;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.euro:before {
+  content: "€";
+  display: block;
+  position: absolute;
+  background: var(--primary-color);
+  padding: 1em;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.dollar:before {
+  content: "$";
+  display: block;
+  position: absolute;
+  background: var(--primary-color);
+  padding: 1em;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.homepage-container {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+.currency{
+ text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--primary-color);
+  text-align:start;
+}

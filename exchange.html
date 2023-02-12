@@ -4,148 +4,172 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Валютын ханш</title>
+    <link rel="stylesheet" href="css/currency.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="/css/exchange.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/headerFooter.css" />
+    <title>Document</title>
   </head>
-
-  <body>
-    <header class="header">
-      <ul class="header-ul">
-        <a href="/index.html" class="header-logo"></a>
-        <li><a href="/society.html"> Нийгэм, улс төр </a></li>
-        <li><a href="/international.html">Олон улс</a></li>
-        <li><a href="/economy.html">Эдийн засаг</a></li>
-        <li><a href="/exchange.html">Валютын ханш</a></li>
-      </ul>
-      <i class="material-icons">search</i>
-    </header>
-
-    <div class="wrapper">
-      <div class="title">
-        <h1>Валютын ханш</h1>
+  <header class="header">
+    <ul class="header-ul">
+      <a href="/index.html" class="header-logo"></a>
+      <li><a href="/society.html"> Нийгэм, улс төр </a></li>
+      <li><a href="/olonuls.html">Олон улс</a></li>
+      <li><a href="/economy.html">Эдийн засаг</a></li>
+      <li><a href="/exchange.html">Валютын ханш</a></li>
+    </ul>
+    <i class="material-icons">search</i>
+  </header>
+  <div class="homepage-container">
+    <body>
+      <div class="currency">
+        <h2>Ханшийн мэдээ</h2>
       </div>
-      <div class="currencyConverter">
-        <div class="box">
-          <h2>Convert from</h2>
-          <select name="from_currency">
-            <option value="USD">US Dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="GBP">British Pound</option>
-            <option value="CAD">Canadian Dollar</option>
-            <option value="AUD">Australian Dollar</option>
-          </select>
-          <input type="text" name="amount" class="input" />
+      <p>
+        Энэхүү вэб дээрх ханш нь зөвхөн мэдээллийн зорилготой бөгөөд валют
+        арилжааны гүйлгээ хийхэд, салбар болон интернет банкны тухайн үеийн ханш
+        мөрдөгдөхийг анхаарна уу. Валютын ханш болон валют арилжааны хэлцэлтэй
+        холбоотой асуудлаар дараах хаягаар холбогдоно уу.
+      </p>
+      <section class="currency-converter">
+        <h3>Валют хөрвүүлэгч</h3>
+        <p>Хөрвүүлэх дүнг оруулан хөрвүүлсэн утгыг харна уу.</p>
+        <div class="currency-converter__block pound">
+          <input
+            type="text"
+            id="MNT"
+            size="10"
+            onchange="mntfunc()"
+            placeholder="MNT"
+          />
+          <label for="MNT"> ₮ MNT</label>
         </div>
-        <i class="material-icons">sync_alt</i>
-        <div class="box">
-          <h2>To</h2>
-          <select name="to_currency">
-            <option value="USD">US Dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="GBP">British Pound</option>
-            <option value="CAD">Canadian Dollar</option>
-            <option value="AUD">Australian Dollar</option>
-          </select>
-          <input type="text" name="amount" class="input" />
+
+        <div class="currency-converter__block dollar">
+          <input
+            type="text"
+            id="USD"
+            size="10"
+            onchange="usdfunc()"
+            placeholder=" USD"
+          />
+          <label for="USD">($) USD United States Dollar </label>
+        </div>
+
+        <div class="currency-converter__block euro">
+          <input
+            type="text"
+            id="EUR"
+            size="10"
+            onchange="eurfunc()"
+            placeholder="Euro"
+          />
+          <label for="EUR">(€) EUR Euro </label>
+        </div>
+
+        <div class="currency-converter__block dollar">
+          <input
+            type="text"
+            id="CAD"
+            size="10"
+            onchange="cadfunc()"
+            placeholder=" CAD"
+          />
+          <label for="CAD">($) CAD Canadian Dollar </label>
+        </div>
+
+        <div class="currency-converter__block dollar">
+          <input
+            type="text"
+            id="AUD"
+            size="10"
+            onchange="audfunc()"
+            placeholder=" AUD"
+          />
+          <label for="AUD">($) AUD Australlian Dollar </label>
+        </div>
+      </section>
+    <script>
+      var mnt, usd, eur, cad, aud;
+      function init() {
+        mnt = document.getElementById("MNT");
+        usd = document.getElementById("USD");
+        eur = document.getElementById("EUR");
+        cad = document.getElementById("CAD");
+        aud = document.getElementById("AUD");
+      }
+
+      function mntfunc() {
+        usd.value = Math.round((parseFloat(mnt.value) / 3510) * 100) / 100;
+        eur.value = Math.round((parseFloat(mnt.value) / 3474) * 100) / 100;
+        cad.value = Math.round((parseFloat(mnt.value) / 3327) * 100) / 100;
+        aud.value = Math.round((parseFloat(mnt.value) / 2920) * 100) / 100;
+      }
+
+      function eurfunc() {
+        mnt.value = parseFloat(eur.value) * 3474;
+        usd.value = parseFloat(eur.value) * 1.11;
+        cad.value = parseFloat(eur.value) * 1.43;
+        aud.value = parseFloat(eur.value) * 1.47;
+      }
+
+      function cadfunc() {
+        mnt.value = parseFloat(cad.value) * 3327;
+        usd.value = parseFloat(cad.value) * 0.77;
+        eur.value = parseFloat(cad.value) * 0.7;
+        aud.value = parseFloat(cad.value) * 1.03;
+      }
+
+      function audfunc() {
+        mnt.value = parseFloat(aud.value) * 2920;
+        usd.value = parseFloat(aud.value) * 0.75;
+        eur.value = parseFloat(aud.value) * 0.68;
+        cad.value = parseFloat(aud.value) * 0.97;
+      }
+
+      function usdfunc() {
+        mnt.value = parseFloat(usd.value) * 3510;
+        eur.value = parseFloat(usd.value) * 0.9;
+        cad.value = parseFloat(usd.value) * 1.29;
+        aud.value = parseFloat(usd.value) * 1.33;
+      }
+
+      init();
+    </script>
+  </div>
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <a href=" index.html " class="footer_logo">
+            <div class="logoSvgBase64"></div>
+          </a>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
-    <div class="container">
-      <table class="currency-tbl">
-        <thead>
-          <tr>
-            <th>Currency</th>
-            <th>Rate</th>
-            <th>Change</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>US Dollar</td>
-            <td>1.13</td>
-            <td>+0.01</td>
-          </tr>
-          <tr>
-            <td>Euro</td>
-            <td>1.25</td>
-            <td>+0.02</td>
-          </tr>
-          <tr>
-            <td>British Pound</td>
-            <td>1.39</td>
-            <td>+0.03</td>
-          </tr>
-          <tr>
-            <td>Japanese Yen</td>
-            <td>123.45</td>
-            <td>-0.01</td>
-          </tr>
-          <tr>
-            <td>Swiss Franc</td>
-            <td>1.09</td>
-            <td>+0.02</td>
-          </tr>
-          <tr>
-            <td>Canadian Dollar</td>
-            <td>1.35</td>
-            <td>+0.04</td>
-          </tr>
-          <tr>
-            <td>Australian Dollar</td>
-            <td>1.45</td>
-            <td>+0.05</td>
-          </tr>
-          <tr>
-            <td>Chinese Yuan</td>
-            <td>7.75</td>
-            <td>-0.02</td>
-          </tr>
-          <tr>
-            <td>Hong Kong Dollar</td>
-            <td>8.85</td>
-            <td>+0.01</td>
-          </tr>
-          <tr>
-            <td>Singapore Dollar</td>
-            <td>1.51</td>
-            <td>+0.03</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2022, AMS.mn</span>
+        <span class="policy_terms">
+          <a href="#">Бидний тухай</a>
+        </span>
+      </div>
     </div>
-
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <a href="index.html " class="footer_logo">
-              <div class="logoSvgBase64"> </div>
-            </a>
-          </div>
-          <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-details">
-        <div class="bottom_text">
-          <span class="copyright_text">Copyright © 2022, AMS.mn</span>
-          <span class="policy_terms">
-            <a href="#">Бидний тухай</a>
-          </span>
-        </div>
-      </div>
     </footer>
-
   </body>
+
 </html>
